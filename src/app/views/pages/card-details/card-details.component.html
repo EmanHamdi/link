@@ -1,0 +1,20 @@
+<section>
+  <div class="container">
+    <h1 class="text-left mb-3">Latest News</h1>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="card">
+          <img class="card-img-top" [src]="cardDetails.urlToImage" alt="Card image cap" height="200">
+          <div class="card-body">
+            <div class="icons text-right">
+              <i class="fa fa-heart"></i>
+              <i class="fa fa-share-alt"></i>
+            </div>
+            <h2 class="card-title">{{cardDetails.title}}</h2>
+            <p class="card-text">{{cardDetails.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

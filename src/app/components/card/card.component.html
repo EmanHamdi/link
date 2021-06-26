@@ -1,0 +1,27 @@
+<section>
+  <div class="card-deck">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let card of cardss">
+        <div class="card mb-3">
+          <img class="card-img-top" src="{{card.urlToImage}}" alt="Card image cap" height="200">
+          <div class="card-body">
+            <div class="icons text-right">
+              <i class="fa fa-heart"></i>
+              <i class="fa fa-share-alt"></i>
+            </div>
+            <a class="card-title" [routerLink]="['/details']" (click)="getCardByID(card)">{{card.title}}</a>
+            <p class="card-text">{{card.content}}</p>
+            <div class="update mt-3">
+              <div class="d-inline p-2 bg-dark mr-2 text-black">{{card.showOnHomepage}}</div>
+              <div class="d-inline p-2 bg-dark text-black">{{card.showOnHomepage}}</div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <i class="fa fa-calendar"></i>
+            <small class="text-muted">{{card.publishedAt}}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

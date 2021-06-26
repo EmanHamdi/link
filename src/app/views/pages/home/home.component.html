@@ -1,0 +1,14 @@
+<!-- Main Slider -->
+<app-carousel [Carousel]='ContentCarousels'></app-carousel>
+<!-- Latest News -->
+<div class="container">
+  <div class="mb-4">
+    <div class="row">
+      <h1 class="text-left col-md-6">Latest News</h1>
+      <a [routerLink]="['/allnews']" class="text-right col-md-6 mt-5 text-bold">View All<i class="fa fa-long-arrow-right"></i></a>
+    </div>
+  </div>
+  <app-card [Card]='news'></app-card>
+</div>
+<!-- Helped -->
+<app-helped></app-helped>

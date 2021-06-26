@@ -1,0 +1,16 @@
+<div class="section" id="carousel">
+  <div class="card page-carousel">
+    <ngb-carousel>
+      <ng-template ngbSlide *ngFor="let carousel of carousels">
+        <img src="{{carousel.img}}" alt="Random first slide">
+        <div class="carousel-caption">
+          <h3>{{carousel.title}}</h3>
+          <p>{{carousel.prag}}</p>
+          <div class="section-button mt-2">
+            <button type="button" class="btn btn-primary">Donate Now</button>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>

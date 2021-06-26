@@ -1,0 +1,56 @@
+<section>
+  <div class="container">
+    <div class="Search mb-5">
+      <div class="row">
+        <div class="col-md-2 col-sm-3">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">From</label>
+            <div class="input-group date">
+              <input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker"
+                (click)="d.toggle()" />
+              <div class="input-group-append">
+                <span class="glyphicon glyphicon-calendar input-group-text">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-3">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">To</label>
+            <div class="input-group date">
+              <input class="form-control" placeholder="yyyy-mm-dd" name="to" ngbDatepicker #d="ngbDatepicker"
+                (click)="d.toggle()" />
+              <div class="input-group-append">
+                <span class="glyphicon glyphicon-calendar input-group-text">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Category</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option *ngFor="let obj of allCategory">{{obj.name}}</option>
+
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-3">
+          <div class="form-group ">
+            <label for="exampleFormControlSelect1">Search</label>
+            <!-- <input type="text" class="form-control" (change)="onChange($event.target.value)"> -->
+            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchword"
+              (input)="searchThis(searchword)">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <app-card [Card]='allNews'></app-card>
+  </div>
+</section>
